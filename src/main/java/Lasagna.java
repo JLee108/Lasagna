@@ -3,11 +3,16 @@ public class Lasagna {
         return 40;
     }
 
-    public static int remainingMinutesInOven() {
-        return Lasagna.expectedMinutesInOven();
+    public static int remainingMinutesInOven(int actualMinutes) {
+        actualMinutes = expectedMinutesInOven();
+        return actualMinutes;
     }
 
-    // TODO: define the 'preparationTimeInMinutes()' method
+    public static int preparationTimeInMinutes(int numberOfLayers) {
+        return numberOfLayers;
+    }
 
-    // TODO: define the 'totalTimeInMinutes()' method
+    public static int totalTimeInMinutes(int actualMinutes, int numberOfLayers) {
+        return remainingMinutesInOven(actualMinutes) + preparationTimeInMinutes(numberOfLayers);
+    }
 }
